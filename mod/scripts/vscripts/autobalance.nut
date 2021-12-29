@@ -5,7 +5,6 @@ array<string> disabledMaps = ["mp_lobby"]
 
 void function AutoBalance_Init()
 {
-	printt("Test print (AUTOBALANCE MOD)")
 	thread AutoBalanceGame()
 }
 
@@ -42,7 +41,7 @@ void function AutoBalanceGame()
 					if (imc.len() > militia.len())
 					{
 						// If team IMC has more players than team MILITIA switch some players
-						int toSwitch = ( ( imc.len() - militia.len() ) / 2 ).toInteger()
+						int toSwitch = ( ( imc.len() - militia.len() ) / 2 ).tointeger()
 						if(toSwitch < 1)
 							toSwitch = 1
 
@@ -59,7 +58,7 @@ void function AutoBalanceGame()
 					else
 					{
 						// If team IMC has more players than team MILITIA switch some players
-						int toSwitch = ( ( militia.len() - imc.len() ) / 2 ).toInteger()
+						int toSwitch = ( ( militia.len() - imc.len() ) / 2 ).tointeger()
 						if(toSwitch < 1)
 							toSwitch = 1
 
