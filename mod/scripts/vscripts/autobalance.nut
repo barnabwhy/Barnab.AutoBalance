@@ -42,8 +42,8 @@ void function AutoBalanceGame()
 					if (imc.len() > militia.len())
 					{
 						// If team IMC has more players than team MILITIA switch some players
-						int toSwitch = imc.len() - (militia.len() + threshold) + 1
-						if(toSwitch < 1 && debug)
+						int toSwitch = ( ( imc.len() - militia.len() ) / 2 ).toInteger()
+						if(toSwitch < 1)
 							toSwitch = 1
 
 						printt("[AUTOBALANCE] " + toSwitch + " IMC players will be team balanced.")
@@ -59,8 +59,8 @@ void function AutoBalanceGame()
 					else
 					{
 						// If team IMC has more players than team MILITIA switch some players
-						int toSwitch = militia.len() - (imc.len() + threshold) + 1
-						if(toSwitch < 1 && debug)
+						int toSwitch = ( ( militia.len() - imc.len() ) / 2 ).toInteger()
+						if(toSwitch < 1)
 							toSwitch = 1
 
 						printt("[AUTOBALANCE] " + toSwitch + " MILITIA players will be team balanced.")
