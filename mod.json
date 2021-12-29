@@ -1,0 +1,30 @@
+{
+	"Name" : "AutoBalance",
+	"Description" : "Automatically balance teams when there is an imbalance in players",
+	"Version": "1.0.0",
+	"LoadPriority": 1,
+
+	"ConVars": [
+		{
+			"Name": "autobal_debug",
+			"DefaultValue": "0"
+		},
+		{
+			"Name": "autobal_threshold",
+			"DefaultValue": "2"
+		},
+		{
+			"Name": "autobal_interval",
+			"DefaultValue": "10.0"
+		}
+	],
+	"Scripts": [
+		{
+			"Path": "autobalance.nut",
+			"RunOn": "SERVER && MP",
+			"ServerCallback": {
+				"After": "AutoBalance_Init"
+			}
+		}
+	]
+}
