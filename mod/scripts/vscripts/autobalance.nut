@@ -52,6 +52,8 @@ void function AutoBalanceGame()
 							imc = GetPlayerArrayOfTeam( TEAM_IMC )
 							int playerIndex = RandomIntRange(0, imc.len())
 							printt("[AUTOBALANCE] IMC player " + playerIndex + " (" + imc[playerIndex].GetPlayerName() + ") will be team balanced.")
+
+							SendHudMessage( imc[playerIndex], "Your team has been switched", -1, 0.4, 65, 37, 208, 0, 0.15, 4, 0.15 )
 							SwitchTeam(imc[playerIndex])
 						}
 					}
