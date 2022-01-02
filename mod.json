@@ -1,7 +1,7 @@
 {
 	"Name" : "AutoBalance",
 	"Description" : "Automatically balance teams when there is an imbalance in players",
-	"Version": "1.0.0",
+	"Version": "1.0.2",
 	"LoadPriority": 1,
 
 	"ConVars": [
