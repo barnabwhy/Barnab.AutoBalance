@@ -1,6 +1,6 @@
 global function AutoBalance_Init
 
-array<string> disabledGamemodes = ["private_match", "inf", "hs", "ffa"]
+array<string> disabledGamemodes = ["private_match", "inf", "hs", "ffa", "hidden", "chamber"]
 array<string> disabledMaps = ["mp_lobby"]
 
 void function AutoBalance_Init()
